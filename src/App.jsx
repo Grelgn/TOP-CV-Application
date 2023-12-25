@@ -3,6 +3,7 @@ import Info from "./components/Info";
 import CV from './components/CV';
 import Education from './components/Education';
 import Experience from './components/Experience';
+import './styles/style.css'
 
 function App() {
   const[name, setName] = useState('Full Name');
@@ -91,7 +92,6 @@ function App() {
 		<>
 			<main>
         <section>
-          {/* Info */}
           <Info 
             nameState={setNameState}
             emailState={setEmailState}
@@ -99,7 +99,6 @@ function App() {
             status={infoStatus}
             submitSetter={submitInfoSetter}
           />
-          {/* Education */}
           <Education
             schoolState={setSchoolState}
             studyState={setStudyState}
@@ -108,7 +107,6 @@ function App() {
             status={eduStatus}
             submitSetter={submitEduSetter}
           />
-          {/* Experience */}
           <Experience
             companyState={setCompanyState}
             positionState={setPositionState}
@@ -120,7 +118,6 @@ function App() {
           />
         </section>
         <aside>
-          {/* CV */}
           <CV
             name={name}
             email={email}

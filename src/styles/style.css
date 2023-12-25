@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    height: 100svh;
+    background-color: #e2e8f0;
+}
+
+main {
+    display: grid;
+    grid-auto-flow: column;
+    padding-top: 40px;
+    min-width: 780px;
+}
+
+main > section {
+    display: grid;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: grid;
+    gap: 5px;
+    justify-items: start;
+    border: 1px solid black;
+    padding: 10px;
+    box-shadow: 3px 3px 5px #475569;
+    background-color: #f8fafc;
+}
+
+button {
+    width: 60px;
+    height: 30px;
+}
+
+legend {
+    font-size: 24px;
+}
+
+.cv {
+    display: grid;
+    gap: 15px;
+    max-width: 400px;
+    border: 1px solid black;
+    padding: 50px;
+    padding-bottom: 100px;
+    box-shadow: 3px 3px 5px #475569;
+    background-color: #f8fafc;
+    width: 420px;
+    height: 594px;
+}
+
+.info, .education {
+    border-bottom: 1px solid black;
+}
+
+aside {
+    display: grid;
+    justify-content: center;
+}

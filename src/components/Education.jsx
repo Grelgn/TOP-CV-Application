@@ -36,9 +36,9 @@ function Education({schoolState, studyState, startDateState, endDateState, statu
                     <input key="school" type="text" name="school" id="school" value={school} required onChange={handleSchoolChange} />
                     <label htmlFor="study">Title of Study</label>
                     <input key="study" type="text" name="study" id="study" value={study} required onChange={handleStudyChange} />
-                    <label htmlFor="start-date">Date of Study</label>
+                    <label htmlFor="start-date">Start Date</label>
                     <input key="start-date" type="date" name="start-date" id="start-date" value={startDate} required onChange={handleStartDateChange} />
-                    <label htmlFor="end-date">Date of Study</label>
+                    <label htmlFor="end-date">End Date</label>
                     <input key="end-date" type="date" name="end-date" id="end-date" value={endDate} required onChange={handleEndDateChange} />
                     <button>Submit</button>
                 </>

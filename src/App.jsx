@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Info from "./components/Info";
 import CV from './components/CV';
 import Education from './components/Education';
+import Experience from './components/Experience';
 
 function App() {
   const[name, setName] = useState('Full Name');
@@ -13,6 +14,12 @@ function App() {
   const[startDate, setStartDate] = useState('Start Date');
   const[endDate, setEndDate] = useState('End Date');
   const[eduStatus, setEdu] = useState('pending');
+  const[company, setCompany] = useState('Company Name');
+  const[position, setPosition] = useState('Position Title');
+  const[responsibilities, setResponsibilities] = useState('Responsibilities');
+  const[startJob, setStartJob] = useState('Start Date');
+  const[endJob, setEndJob] = useState('End Date');
+  const[expStatus, setExp] = useState('pending');
 
   const setNameState = (value) => {
     setName(value);
@@ -48,10 +55,35 @@ function App() {
   const submitEduSetter = () => {
     if (eduStatus == 'pending') {
       setEdu('submitted');
-    } else if (infoStatus == 'submitted') {
+    } else if (eduStatus == 'submitted') {
       setEdu('edit');
-    } else if (infoStatus == 'edit') {
+    } else if (eduStatus == 'edit') {
       setEdu('submitted');
+    }
+  }
+
+  const setCompanyState = (value) => {
+    setCompany(value);
+  }
+  const setPositionState = (value) => {
+    setPosition(value);
+  }
+  const setResponsibilitiesState = (value) => {
+    setResponsibilities(value);
+  }
+  const setStartJobState = (value) => {
+    setStartJob(value);
+  }
+  const setEndJobState = (value) => {
+    setEndJob(value);
+  }
+  const submitExpSetter = () => {
+    if (expStatus == 'pending') {
+      setExp('submitted');
+    } else if (expStatus == 'submitted') {
+      setExp('edit');
+    } else if (expStatus == 'edit') {
+      setExp('submitted');
     }
   }
 
@@ -77,6 +109,15 @@ function App() {
             submitSetter={submitEduSetter}
           />
           {/* Experience */}
+          <Experience
+            companyState={setCompanyState}
+            positionState={setPositionState}
+            responsibilitiesState={setResponsibilitiesState}
+            startJobState={setStartJobState}
+            endJobState={setEndJobState}
+            status={expStatus}
+            submitSetter={submitExpSetter}
+          />
         </section>
         <aside>
           {/* CV */}
@@ -88,6 +129,11 @@ function App() {
             study={study}
             startDate={startDate}
             endDate={endDate}
+            company={company}
+            position={position}
+            responsibilities={responsibilities}
+            startJob={startJob}
+            endJob={endJob}
           />
         </aside>
       </main>

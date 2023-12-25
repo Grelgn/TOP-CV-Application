@@ -24,5 +24,4 @@ dist-ssr
 *.sw?
 
 #Mine
-vite.config.js
 .eslintrc.cjs
